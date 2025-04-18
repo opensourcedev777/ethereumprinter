@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ethereum Printer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --eth-blue: #88aaf1;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #1a1a1a, #0f0f0f);
+      color: var(--eth-blue);
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    .container {
+      padding: 50px 20px;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: var(--eth-blue);
+    }
+    h2 {
+      font-size: 1.5rem;
+      color: #cccccc;
+      margin-bottom: 30px;
+    }
+    .eth-printer {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto 20px;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/0/05/Ethereum_logo_2014.svg') no-repeat center/contain;
+      animation: shake 0.8s infinite;
+    }
+    @keyframes shake {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(2deg); }
+      50% { transform: rotate(-2deg); }
+      75% { transform: rotate(2deg); }
+      100% { transform: rotate(0deg); }
+    }
+    .falling-eth {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/05/Ethereum_logo_2014.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation: fall 5s linear infinite;
+      opacity: 0.8;
+    }
+    @keyframes fall {
+      0% { top: -50px; opacity: 0; }
+      20% { opacity: 1; }
+      100% { top: 100vh; opacity: 0; }
+    }
+    .button {
+      background-color: var(--eth-blue);
+      color: black;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #6e95e0;
+    }
+    .footer {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .section {
+      padding: 60px 20px;
+    }
+    .section h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: var(--eth-blue);
+    }
+    .section p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #dddddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 style="margin-bottom: 5px; font-size: 2.2rem;">[ $ETHRRR ]</h1>
+    <div class="eth-printer"></div>
+    <h1>Ethereum Printer</h1>
+    <h2>Printing ETH on Solana 🖨️💸</h2>
+    <button class="button" onclick="printEth()">Start Printing</button>
+    <p id="printerStatus" style="margin-top: 20px; font-size: 1.2rem;"></p>
+  </div>
+
+  <div class="section" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; align-items: flex-start; text-align: left;">
+    <div style="flex: 1; min-width: 300px; max-width: 500px;">
+      <h3>Automatic Ethereum Rewards</h3>
+      <p style="font-size: 1.1rem; line-height: 1.6; color: #dddddd;">
+        → Every 5 minutes, holders receive Ethereum rewards automatically distributed to their wallets<br />
+        → 5% tax is collected from every buy and sell transaction<br />
+        → Tax is automatically converted to Ethereum<br />
+        → Smart contract distributes Ethereum to all holders every 5 minutes<br />
+        → Rewards are proportional to your token holdings
+      </p>
+    </div>
+    <div style="flex: 1; min-width: 300px; max-width: 500px;">
+      <h3>&rarr; SYSTEM.INFO</h3>
+      <p style="font-size: 1.1rem; line-height: 1.6; color: #dddddd;">
+        The $ETHRRR token uses a revolutionary reward system that automatically distributes Ethereum to all holders every 5 minutes.<br /><br />
+        Our unique "printer" mechanism ensures a continuous stream of Ethereum rewards to token holders, creating a passive income source for everyone in the community.<br /><br />
+        The smart contract is designed to optimize rewards distribution while maintaining token value through strategic tax allocation.
+      </p>
+    </div>
+  </div>
+
+  
+
+  
+
+  <div class="section">
+    <h3>Community</h3>
+    <p>Join the ETHRRR crew on Twitter, Telegram, and Discord. We’re printing ETH and memes 24/7.</p>
+  </div>
+
+  <div class="footer" style="display: flex; flex-wrap: wrap; justify-content: space-around; text-align: left; padding: 40px 20px; background-color: #0f0f0f;">
+  <div style="flex: 1; min-width: 250px; max-width: 300px;">
+    <h3 style="color: var(--eth-blue);">[$ETHRRR]</h3>
+    <p style="color: #ccc;">Ethereum Printer - Earn Ethereum rewards automatically</p>
+  </div>
+  <div style="flex: 1; min-width: 200px; max-width: 250px;">
+    <h4 style="color: var(--eth-blue);">Links</h4>
+    <ul style="list-style: none; padding: 0; line-height: 1.8;">
+      <li><a href="#" style="color: var(--eth-blue); text-decoration: none;">Home</a></li>
+      <li><a href="#" style="color: var(--eth-blue); text-decoration: none;">Rewards</a></li>
+      <li><a href="#" style="color: var(--eth-blue); text-decoration: none;">How It Works</a></li>
+      <li><a href="#" style="color: var(--eth-blue); text-decoration: none;">Calculator</a></li>
+    </ul>
+  </div>
+  <div style="flex: 1; min-width: 200px; max-width: 250px;">
+    <h4 style="color: var(--eth-blue);">Community</h4>
+    <ul style="list-style: none; padding: 0; line-height: 1.8;">
+      <li><a href="#" style="color: var(--eth-blue); text-decoration: none;">Twitter</a></li>
+      <li><a href="#" style="color: var(--eth-blue); text-decoration: none;">Telegram</a></li>
+    </ul>
+  </div>
+  <div style="width: 100%; text-align: center; margin-top: 40px; font-size: 0.9rem; color: #555;">
+    © 2025 Ethereum Printer $ETHRRR. All rights reserved.
+  </div>
+</div>
+
+  <script>
+    function printEth() {
+      const status = document.getElementById('printerStatus');
+      status.innerText = "\ud83d\ude80 Printing ETH... Please wait!";
+      setTimeout(() => {
+        status.innerText = "✅ ETH successfully printed on Solana!";
+      }, 2000);
+    }
+
+    // Generate falling ETH icons
+    setInterval(() => {
+      const eth = document.createElement('div');
+      eth.classList.add('falling-eth');
+      eth.style.left = Math.random() * window.innerWidth + 'px';
+      eth.style.animationDuration = (Math.random() * 3 + 4) + 's';
+      document.body.appendChild(eth);
+      setTimeout(() => eth.remove(), 6000);
+    }, 300);
+  </script>
+</body>
+</html>
